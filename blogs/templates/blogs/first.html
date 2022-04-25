@@ -1,0 +1,122 @@
+{% extends "blogs/_base.html" %}
+
+
+{% load static %}
+
+
+{% block title %}Мой первый блог | Мой первый сайт{% endblock title %}
+{% block content %}
+
+
+<div class="row">
+    <div class="mx-auto" style="width: 200px;">
+        <span>
+            Мой первый Блог
+        </span>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-3 mt-2">
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/piramidy.jpg' %}" class="card-img-top" alt="Строение">
+            <div class="card-body">
+                <h5 class="card-title">Египетские Пирамиды</h5>
+                <p class="card-text-center">Египетские пирамиды, расположенные недалеко от города Каир, где плодородная долина Нила.</p>
+                <a href="{% url 'piramyda_page' %}" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/kolizey.jpg' %}" class="card-img-top" alt="Строение2">
+            <div class="card-body">
+                <h5 class="card-title">Колизей</h5>
+                <p class="card-text-center">Колизей – один из самых узнаваемых архитектурных памятников.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/krasnaya_ploshad.jpg' %}" class="card-img-top" alt="Строение3">
+            <div class="card-body">
+                <h5 class="card-title">Красная Площадь</h5>
+                <p class="card-text-center">Красная площадь – основной символ и наиболее известное историческое место Москвы.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/eyfeleva-bashnya.jpg' %}" class="card-img-top" alt="Строение4">
+            <div class="card-body">
+                <h5 class="card-title">Эйфелевая башня</h5>
+                <p class="card-text-center">Эйфелева башня — самая узнаваемая достопримечательность Парижа.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-3 mt-2">
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/reykhstag.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Рейхстаг</h5>
+                <p class="card-text-center">Рейхстаг – здание немецкого парламента в Берлине.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/petergof.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Петергоф</h5>
+                <p class="card-text-center">Петергоф — царство фонтанов, феерия играющей воды, дворцы.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/luvr.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Музей Лувр</h5>
+                <p class="card-text-center">Лувр – это самая знаменитая достопримечательность Парижа.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-2 col-md-4 col-sm-12">
+        <div class="card">
+            <img src="{% static 'blogs/img/kreml.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Московский Кремль</h5>
+                <p class="card-text-center">Московский Кремль - Это самая крупная крепость Европы.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="row mt-3">
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="{% url 'first_page' %}">1</a></li>
+        <li class="page-item"><a class="page-link" href="{% url 'blogs_index' %}">2</a></li>
+        <li class="page-item"><a class="page-link" href="{% url 'user_page' %}">3</a></li>
+        <li class="page-item"><a class="page-link" href="{% url 'friend_page' %}">4</a></li>
+        <li>
+        	<a class="page-link" href="{% url 'blogs_index' %}">Next</a>
+    	</li>
+	</ul>
+</nav>
+</div>
+
+
+{% endblock content %}
